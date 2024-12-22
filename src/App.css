@@ -22,7 +22,7 @@ body, html {
   text-align: center;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, #c91b63, #861226, #86172a, #1c42c0);
+  background: linear-gradient(135deg, #02867b, #861226, #86172a, #1c42c0);
   background-size: 300% 300%;
   animation: gradient-animation 6s ease infinite;
   color: white;
