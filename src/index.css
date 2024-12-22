@@ -1,0 +1,138 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* App container */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff758c, #85a1ff);
+  background-size: 300% 300%;
+  animation: gradient-animation 6s ease infinite;
+  color: white;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+}
+
+/* Title */
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.5rem;
+  margin: 10px 0 30px;
+}
+
+/* Loader animation */
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loader div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  animation: loader-animation 1.2s linear infinite;
+}
+
+.loader div:nth-child(1) {
+  top: 0;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+
+.loader div:nth-child(2) {
+  top: 32px;
+  left: 0;
+  animation-delay: -0.2s;
+}
+
+.loader div:nth-child(3) {
+  top: 64px;
+  left: 32px;
+  animation-delay: 0s;
+}
+
+.loader div:nth-child(4) {
+  top: 32px;
+  left: 64px;
+  animation-delay: 0.2s;
+}
+
+/* Gradient animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Loader animation */
+@keyframes loader-animation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .loader {
+    width: 60px;
+    height: 60px;
+  }
+  .loader div {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
